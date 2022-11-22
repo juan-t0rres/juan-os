@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary: #3ECAA2;
+  --secondary: #11101c;
+  --background: #FEF1DA;
+  --light: #79e4c6;
+}
+
+@font-face {
+  font-family: "Dogica";
+  src: local("Dogica"), url(./fonts/dogica.otf) format("opentype");
+}
+
+body {
+  background-color: var(--primary);
+  background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+}
+
+.app {
+  position: relative;
+  height: 90vh;
+}
+
+.pixel-font {
+  font-family: "Dogica";
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
+
+.bar {
+  height: 30px;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--secondary);
+  cursor: move;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.primary {
+  color: var(--primary) !important;
+}
+
+.icons {
+  display: flex;
+}
+
+.icon {
+  width: 20px;
+  margin-right: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.selected {
+  border: 1px solid white;
+  padding: 2px;
+  margin: -3px;
+  margin-right: 17px;
+}
+
+.card-icon {
+  color: black;
+  cursor: default;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  padding: 8px;
+}
+
+.remove-window {
+  width: 14px;
+  height: 14px;
+  background-color: red;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 12px;
+  padding-left: 3px;
+  padding-top: 3px;
+}
+
+.window {
+  width: fit-content;
+  position: absolute;
+  top: 10%;
+  left: 20vw;
+  background-color: white;
+  border: 1px solid var(--secondary);
+  box-shadow: 10px 10px 2px 1px rgba(17, 16, 28, 0.4);
+}
+
+.about {
+  max-width: 850px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.projects {
+  max-width: 850px;
+  background-color: var(--background);
+  padding: 10px;
+}
+
+.work {
+  max-width: 400px;
+  max-height: 535px;
+  background-color: var(--background);
+  padding: 10px;
+}
+
+.chat {
+  overflow-y: scroll;
+  width: 350px;
+  height: 450px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.msg {
+  display: flex;
+  margin: 10px;
+  padding: 5px;
+}
+
+.received-msg {
+  padding: 8px;
+  background-color: white;
+  margin: 5px;
+  width: fit-content;
+  margin-bottom: -10px;
+}
+
+.option {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: var(--light);
+  margin: 5px;
+  width: fit-content;
+  margin-left: auto;
+  margin-bottom: -10px;
+}
+
+.loading {
+  margin: 180px auto 0 auto;
+  width: 400px;
+  height: 340px;
+  background-color: var(--background);
+  border: 1px solid black;
+}
+
+.loading-screen {
+  background-color: black;
+  width: 370px;
+  height: 260px;
+  margin: 15px auto 0 auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 5px;
+  background-color: white;
+}
+
+.loading-bar-color {
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.loading-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card {
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid var(--secondary);
+  box-shadow: 4px 4px 2px 1px rgba(17, 16, 28, 0.2);
+}
+
+h1 {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--secondary);
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+p {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary {
+  padding: 20px;
+  padding-left: 0px;
+  padding-top: 0px;
+}
+
+.navbar {
+  background-color: var(--secondary);
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
