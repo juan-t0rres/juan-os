@@ -1,11 +1,20 @@
 import Window from "./Window";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const options = [
   {
     text: "How can I contact you?",
     answer: [
       "The best way to reach me is via my personal email",
+      "juanditb@gmail.com",
+      "Click to copy the address to your clipboard",
+    ],
+  },
+  {
+    text: "Can I get your resume?",
+    answer: [
+      "I don't place my resume on this site because it holds personal information like my phone number",
+      "If you email me I'll be happy to send it over",
       "juanditb@gmail.com",
       "Click to copy the address to your clipboard",
     ],
@@ -78,10 +87,16 @@ export default function Chat({ zIndex, onDrag, removeWindow }) {
   const [answers, setAnswers] = useState([]);
   const [showOptions, setShowOptions] = useState(false);
   const [displayingAnswer, setDisplayingAnswer] = useState(false);
+  const bottomRef = useRef(null);
 
   function timeout(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
+
+  useEffect(() => {
+    // 👇️ scroll to bottom every time messages change
+    bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+  }, [answers, showOptions]);
 
   async function addAnswer(option) {
     setShowOptions(false);
@@ -134,6 +149,7 @@ export default function Chat({ zIndex, onDrag, removeWindow }) {
             ))}
           </>
         )}
+        <div ref={bottomRef} />
       </div>
     </Window>
   );

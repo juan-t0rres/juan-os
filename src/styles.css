@@ -96,6 +96,15 @@ body {
   padding-top: 3px;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .window {
     position: absolute;
@@ -104,6 +113,8 @@ body {
     background-color: white;
     border: 1px solid var(--secondary);
     box-shadow: 10px 10px 2px 1px rgba(17, 16, 28, 0.4);
+    -webkit-animation: fadeIn 0.4s;
+    animation: fadeIn 0.4s;
   }
 }
 
@@ -122,6 +133,37 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.tip {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 32px;
+  left: 50%;
+  top: 8%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: fadeInOut 5s;
+  animation: fadeInOut 5s;
+  opacity: 0;
 }
 
 .projects {
@@ -282,4 +324,6 @@ p {
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
 }

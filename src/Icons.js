@@ -15,7 +15,7 @@ export function LogoIcon() {
 export function AboutIcon({ setWindow, border }) {
   return (
     <div
-      className={`icon` + (border ? ' selected' : '')}
+      className={`icon` + (border ? " selected" : "")}
       onClick={() => setWindow("about")}
     >
       <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -31,7 +31,10 @@ export function AboutIcon({ setWindow, border }) {
 
 export function ProjectsIcon({ setWindow, border }) {
   return (
-    <div className={`icon` + (border ? ' selected' : '')} onClick={() => setWindow("projects")}>
+    <div
+      className={`icon` + (border ? " selected" : "")}
+      onClick={() => setWindow("projects")}
+    >
       <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         {" "}
         <path
@@ -45,7 +48,10 @@ export function ProjectsIcon({ setWindow, border }) {
 
 export function WorkIcon({ setWindow, border }) {
   return (
-    <div className={`icon` + (border ? ' selected' : '')} onClick={() => setWindow("work")}>
+    <div
+      className={`icon` + (border ? " selected" : "")}
+      onClick={() => setWindow("work")}
+    >
       <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         {" "}
         <path
@@ -59,7 +65,10 @@ export function WorkIcon({ setWindow, border }) {
 
 export function ChatIcon({ setWindow, border }) {
   return (
-    <div className={`icon` + (border ? ' selected' : '')} onClick={() => setWindow("chat")}>
+    <div
+      className={`icon` + (border ? " selected" : "")}
+      onClick={() => setWindow("chat")}
+    >
       <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         {" "}
         <path
@@ -106,6 +115,20 @@ export function CardTextIcon() {
         {" "}
         <path
           d="M4 4H2v16h20V4H4zm0 2h16v12H4V6zm2 2h12v2H6V8zm0 4h10v2H6v-2z"
+          fill="currentColor"
+        />{" "}
+      </svg>
+    </div>
+  );
+}
+
+export function ArrowIcon() {
+  return (
+    <div style={{ width: 32, height: 32, color: "black" }}>
+      <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        {" "}
+        <path
+          d="M11 4h2v12h2v2h-2v2h-2v-2H9v-2h2V4zM7 14v2h2v-2H7zm0 0v-2H5v2h2zm10 0v2h-2v-2h2zm0 0v-2h2v2h-2z"
           fill="currentColor"
         />{" "}
       </svg>

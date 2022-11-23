@@ -103,8 +103,7 @@ function App() {
   function onWindowChange(nextWindow) {
     if (isMobile) {
       setWindows([nextWindow]);
-    }
-    else if (!windows.includes(nextWindow)) {
+    } else if (!windows.includes(nextWindow)) {
       setWindows([nextWindow, ...windows]);
     }
   }
