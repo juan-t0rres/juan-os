@@ -16,7 +16,7 @@ const Windows = {
 
 function App() {
   const [windows, setWindows] = useState([Windows.About]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const [width, setWidth] = useState(window.innerWidth);
 
