@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap");
 
 :root {
-  --primary: #3ECAA2;
+  --primary: #3ecaa2;
   --secondary: #11101c;
-  --background: #FEF1DA;
+  --background: #fef1da;
   --light: #79e4c6;
 }
 
@@ -97,14 +97,14 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-.window {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: white;
-  border: 1px solid var(--secondary);
-  box-shadow: 10px 10px 2px 1px rgba(17, 16, 28, 0.4);
-}
+  .window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    border: 1px solid var(--secondary);
+    box-shadow: 10px 10px 2px 1px rgba(17, 16, 28, 0.4);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -147,6 +147,12 @@ body {
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .chat {
+    width: 350px;
+  }
 }
 
 .msg {
