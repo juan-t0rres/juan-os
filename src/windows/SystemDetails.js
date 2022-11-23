@@ -31,7 +31,7 @@ export default function SystemDetails({
                 { field: "Name", value: "Juan Torres" },
                 {
                   field: "Date of Birth",
-                  value: "06/17/2022 (22 years old)",
+                  value: "06/17/2000 (22 years old)",
                 },
                 {
                   field: "Occupation",
