@@ -8,6 +8,7 @@ export default function SystemDetails({
   onDrag,
   isMobile,
   showTip,
+  setIndex,
 }) {
   return (
     <>
@@ -21,6 +22,7 @@ export default function SystemDetails({
       )}
       <Window
         zIndex={zIndex}
+        setIndex={setIndex}
         windowString="about"
         removeWindow={removeWindow}
         onDrag={onDrag}

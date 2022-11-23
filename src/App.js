@@ -14,17 +14,6 @@ const Windows = {
   Chat: "chat",
 };
 
-// TODO
-// Dragging causes reordering
-// This causes animation to flash
-// And tip comes back (FIXED)
-
-// Tip is already fixed
-// You have to fix animation
-// Idea:
-// Global zIndex
-// Each time onStart happens, change zIndex to zIndex + 1, use new zIndex
-
 function App() {
   const [windows, setWindows] = useState([Windows.About]);
   const [loading, setLoading] = useState(true);
@@ -36,7 +25,7 @@ function App() {
   }
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
-    setTimeout(() => setShowTip(false), 9000);
+    setTimeout(() => setShowTip(false), 6900);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };

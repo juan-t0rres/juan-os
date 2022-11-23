@@ -113,8 +113,8 @@ body {
     background-color: white;
     border: 1px solid var(--secondary);
     box-shadow: 10px 10px 2px 1px rgba(17, 16, 28, 0.4);
-    -webkit-animation: fadeIn 0.4s;
-    animation: fadeIn 0.4s;
+    /* -webkit-animation: fadeIn 0.4s;
+    animation: fadeIn 0.4s; */
   }
 }
 
