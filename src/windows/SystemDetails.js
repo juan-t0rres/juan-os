@@ -7,17 +7,18 @@ export default function SystemDetails({
   removeWindow,
   onDrag,
   isMobile,
+  showTip,
 }) {
   return (
     <>
-      <div className="tip">
-        {!isMobile && (
+      {!isMobile && showTip && (
+        <div className="tip">
           <h1 className="pixel-font" style={{ fontSize: 14 }}>
             Drag windows around, open more windows above
           </h1>
-        )}
-        <ArrowIcon />
-      </div>
+          <ArrowIcon />
+        </div>
+      )}
       <Window
         zIndex={zIndex}
         windowString="about"

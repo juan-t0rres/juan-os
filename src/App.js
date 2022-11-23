@@ -17,7 +17,7 @@ const Windows = {
 function App() {
   const [windows, setWindows] = useState([Windows.About]);
   const [loading, setLoading] = useState(true);
-
+  const [showTip, setShowTip] = useState(true);
   const [width, setWidth] = useState(window.innerWidth);
 
   function handleWindowSizeChange() {
@@ -37,6 +37,9 @@ function App() {
   }, []);
 
   function removeWindow(deleteWindow) {
+    if (deleteWindow === "about") {
+      setShowTip(false);
+    }
     setWindows(windows.filter((w) => w !== deleteWindow));
   }
 
@@ -54,6 +57,7 @@ function App() {
         case Windows.About:
           windowContent.push(
             <SystemDetails
+              showTip={showTip}
               isMobile={isMobile}
               zIndex={zIndex}
               onDrag={onDrag}
