@@ -142,7 +142,7 @@ body {
 .chat {
   overflow-y: scroll;
   width: 350px;
-  min-height: 450px;
+  height: 450px;
   background-color: var(--background);
   display: flex;
   flex-direction: column;
