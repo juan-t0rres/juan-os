@@ -2,18 +2,28 @@ import Window from "./Window";
 import Card from "../Card";
 import { TeachIcon, ScriptIcon, CardTextIcon } from "../Icons";
 
-export default function SystemDetails({ zIndex, removeWindow, onDrag }) {
+export default function SystemDetails({
+  zIndex,
+  removeWindow,
+  onDrag,
+  isMobile,
+}) {
   return (
     <Window
       zIndex={zIndex}
-      window="about"
+      windowString="about"
       removeWindow={removeWindow}
       onDrag={onDrag}
       title="SYSTEM DETAILS"
     >
       <div className="about">
-        <div style={{ display: "flex" }}>
-          <div style={{ width: "50%" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: isMobile ? "column" : "row",
+          }}
+        >
+          <div style={{ width: isMobile ? "100%" : "50%" }}>
             <Card
               title="ABOUT ME"
               icon={<TeachIcon />}
@@ -30,7 +40,7 @@ export default function SystemDetails({ zIndex, removeWindow, onDrag }) {
               ]}
             />
           </div>
-          <div style={{ width: "50%" }}>
+          <div style={{ width: isMobile ? "100%" : "50%" }}>
             <Card
               title="EDUCATION"
               icon={<ScriptIcon />}

@@ -102,7 +102,7 @@ export default function Chat({ zIndex, onDrag, removeWindow }) {
       zIndex={zIndex}
       onDrag={onDrag}
       removeWindow={removeWindow}
-      window="chat"
+      windowString="chat"
       key="chat"
       title="CHAT BOT"
     >
@@ -111,13 +111,13 @@ export default function Chat({ zIndex, onDrag, removeWindow }) {
           <>
             <Option option={currentOption} addAnswer={addAnswer} />
             {answers.map((answer) => (
-              <ReceivedMessage text={answer} />
+              <ReceivedMessage key={answer} text={answer} />
             ))}
             {showOptions &&
               options
                 .filter((option) => option.text !== currentOption.text)
                 .map((option) => (
-                  <Option option={option} addAnswer={addAnswer} />
+                  <Option key={option.text} option={option} addAnswer={addAnswer} />
                 ))}
           </>
         ) : (
@@ -126,6 +126,7 @@ export default function Chat({ zIndex, onDrag, removeWindow }) {
             <ReceivedMessage text="Go ahead and ask me a question." />
             {options.map((option) => (
               <Option
+                key={option.text}
                 option={option}
                 setAnswers={setAnswers}
                 addAnswer={addAnswer}

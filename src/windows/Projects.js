@@ -3,7 +3,12 @@ import Card from "../Card";
 
 function LinkIcon({ href }) {
   return (
-    <a target="_blank" rel="noreferrer" href={href} style={{ width: 32, height: 32 }}>
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href={href}
+      style={{ width: 32, height: 32 }}
+    >
       <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         {" "}
         <path
@@ -17,7 +22,12 @@ function LinkIcon({ href }) {
 
 function CodeIcon({ href }) {
   return (
-    <a target="_blank" rel="noreferrer" href={href} style={{ width: 32, height: 32 }}>
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href={href}
+      style={{ width: 32, height: 32 }}
+    >
       <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         {" "}
         <path
@@ -47,7 +57,13 @@ function Project({ title, summary, link, codeLink }) {
 
 export default function Projects({ zIndex, removeWindow, onDrag }) {
   return (
-    <Window zIndex={zIndex} window="projects" onDrag={onDrag} removeWindow={removeWindow} title="PROJECTS">
+    <Window
+      zIndex={zIndex}
+      windowString="projects"
+      onDrag={onDrag}
+      removeWindow={removeWindow}
+      title="PROJECTS"
+    >
       <div className="projects">
         <Project
           link="https://pixel-chess.glitch.me/"

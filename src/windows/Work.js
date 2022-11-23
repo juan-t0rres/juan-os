@@ -11,7 +11,7 @@ export default function Work({ onDrag, zIndex, removeWindow }) {
       zIndex={zIndex}
       onDrag={onDrag}
       removeWindow={removeWindow}
-      window="work"
+      windowString="work"
       key="work"
       title="WORK EXPERIENCE"
     >

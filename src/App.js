@@ -16,7 +16,21 @@ const Windows = {
 
 function App() {
   const [windows, setWindows] = useState([Windows.About]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 2300);
@@ -40,6 +54,7 @@ function App() {
         case Windows.About:
           windowContent.push(
             <SystemDetails
+              isMobile={isMobile}
               zIndex={zIndex}
               onDrag={onDrag}
               key="about"
@@ -86,7 +101,10 @@ function App() {
   }
 
   function onWindowChange(nextWindow) {
-    if (!windows.includes(nextWindow)) {
+    if (isMobile) {
+      setWindows([nextWindow]);
+    }
+    else if (!windows.includes(nextWindow)) {
       setWindows([nextWindow, ...windows]);
     }
   }
