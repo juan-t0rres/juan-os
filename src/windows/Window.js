@@ -33,7 +33,7 @@ export default function Window({
   }
 
   const content = (
-    <div className="window" style={{ zIndex: zIndex }}>
+    <div className="window crt" style={{ zIndex: zIndex }}>
       <div className="bar pixel-font">
         <div />
         <div>{title}</div>

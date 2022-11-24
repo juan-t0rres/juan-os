@@ -1,4 +1,5 @@
 import "./styles.css";
+import "./crt.css";
 import { LogoIcon, AboutIcon, ProjectsIcon, WorkIcon, ChatIcon } from "./Icons";
 import { useEffect, useState } from "react";
 import SystemDetails from "./windows/SystemDetails";
@@ -118,7 +119,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="crt">
       <div className="navbar">
         <div className="logo">
           <LogoIcon />
@@ -144,7 +145,7 @@ function App() {
         </div>
       </div>
       <div className="app">{getWindows()}</div>
-    </>
+    </div>
   );
 }
 
