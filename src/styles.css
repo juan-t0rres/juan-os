@@ -80,9 +80,8 @@ body {
   cursor: default;
   height: 32px;
   width: 32px;
-  border-radius: 50%;
   background-color: var(--primary);
-  padding: 8px;
+  padding: 6px;
 }
 
 .remove-window {
@@ -169,6 +168,8 @@ body {
 .projects {
   max-width: 850px;
   min-width: 300px;
+  max-height: 80vh;
+  overflow-y: scroll;
   background-color: var(--background);
   padding: 10px;
 }
@@ -281,11 +282,9 @@ body {
 }
 
 h1 {
-  font-family: "Karla", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--secondary);
-  letter-spacing: 1.5px;
 }
 
 h2 {
@@ -310,6 +309,7 @@ p {
   padding: 20px;
   padding-left: 0px;
   padding-top: 0px;
+  line-height: 25px;
 }
 
 .navbar {

@@ -81,6 +81,11 @@ export default function Projects({ zIndex, removeWindow, onDrag }) {
           title="GRUB UP"
           summary="Proof of concept restaurant pickup ordering system. Created for coursework at my university. Uses an authentication system built from scratch using JSON web tokens and simple cryptography. Created with React, Node.js, and Express.js."
         />
+        <Project
+          link="https://type.juantorr.es/"
+          title="TIMETYPE"
+          summary="Typing test application that lets you determine your words per minute. Created with React."
+        />
       </div>
     </Window>
   );

@@ -14,15 +14,15 @@ export default function Card({
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          marginBottom: size === 'sm' ? "2px" : "8px",
+          marginBottom: size === 'sm' ? "2px" : "6px",
         }}
       >
         {link ? (
           <a target="_blank" rel="noreferrer" href={link} style={{ textDecoration: "none" }}>
-            <h1>{title}</h1>
+            <h1 className="pixel-font">{title}</h1>
           </a>
         ) : (
-          <h1>{title}</h1>
+          <h1 className="pixel-font">{title}</h1>
         )}
         {icon}
       </div>
